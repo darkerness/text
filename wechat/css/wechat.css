@@ -1,0 +1,71 @@
+.z-mobile{
+    width: 300px;
+    height: 550px;
+    margin: 20px 0 0 20px;
+    float: left;
+    position: relative;
+    border: 1px solid #ccc;
+}
+.z-mobile-head{
+    background: url("../images/wx_mobile_header_bg.png");
+    width: 300px;
+    height: 60px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+.z-mobile-foot{
+    background: url("../images/wx_mobile_footer_bg.png");
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    bottom: 0px;
+    border-top: 1px solid #dcdbdb;
+}
+.z-mobile-foot ul{margin-left: 50px;}
+.z-menu li{
+    width: 82px;
+    float: left;
+    line-height: 48px;
+    text-align: center;
+    cursor: pointer;
+}
+.z-menu-child{
+    position: absolute;
+    bottom: 60px
+}
+.z-menu-child li{
+    width: 77px;
+    float: left;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 0 2px;
+    height: auto;
+    overflow: hidden;
+}
+.z-menu-child span{
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    width: 98%;
+    cursor: pointer;
+}
+
+.z-menu-child .z-child-menu{
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    width: 98%;
+    cursor: pointer;
+}
+.z-info {
+    border: 1px solid #ccc;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 510px;
+    padding: 20px;
+}
+.z-info .row{
+    margin-bottom: 20px;
+}

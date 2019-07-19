@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <title>Title</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    input {
+        height: 25px;
+        border: 1px solid #e7e7eb;
+    }
+
+    .main {
+        display: flex;;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .main-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bg-top {
+        width: 320px;
+        height: 64px;
+        background: url("./images/wx_mobile_header_bg.png");
+    }
+
+    .main-left-empty {
+        width: 318px;
+        height: 450px;
+        border: 1px solid #efeff4;
+    }
+
+    .bg-bottom {
+        width: 318px;
+        height: 50px;
+        background: url("./images/wx_mobile_footer_bg.png");
+        padding-left: 44px;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid #e7e7eb;
+    }
+
+    .bg-bottom-menu {
+        position: relative;
+        color: #616161;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 92px;
+        border-right: 1px solid #e7e7eb;
+        cursor: pointer;
+    }
+
+    .bg-bottom-menu-active {
+        border: 1px solid #44b549;
+        color: #44b549;
+    }
+
+    .border-right-none {
+        border-right: none
+    }
+
+    .main-right {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        background: #f4f5f9;
+        width: calc(100vw - 320px - 40px);
+        height: fit-content;
+    }
+
+    .main-right-head {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #e7e7eb;
+        padding: 8.5px 0;
+        justify-content: space-between;
+    }
+
+    .main-del-menu {
+        color: #3c8dbc;
+        cursor: pointer;
+    }
+
+    .main-right-body {
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-right-body-title {
+        display: flex;
+        flex-direction: row;
+        padding: 15px 0;
+        align-items: center;
+    }
+
+    .main-right-body-type {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+
+    .main-right-body-type-title {
+        margin-right: 10px;
+    }
+
+    .main-right-body-content {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e7e7eb;
+    }
+
+    .main-right-body-content-title {
+        padding: 15px;
+        color: #8d8d8d;
+    }
+
+    .main-right-body-content-view {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .main-right-body-content-view-title {
+        width: 150px;
+        text-align: right;
+    }
+
+    .main-right-body-content-news {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 40px 0;
+    }
+
+    .main-right-body-content-send {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px dotted #d9dadc;
+        width: 240px;
+        height: 100px;
+    }
+
+    .main-right-body-content-send-btn {
+        color: #3c8dbc;
+    }
+
+    .font-size30 {
+        font-size: 30px;
+        color: #616161;
+    }
+
+    .bg-bottom-menu-main {
+        display: none;
+        position: absolute;
+        top: -70px;
+        width: 92px;
+        color: #616161;
+    }
+
+    .bg-bottom-menu-main-active {
+        display: block;
+    }
+
+    .bg-bottom-menu-triangle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 45px;
+        background: white;
+        z-index: 1;
+        border-right: 1px solid #e7e7eb;
+        border-bottom: 1px solid #e7e7eb;
+        margin-left: 40px;
+        transform: rotate(45deg);
+    }
+
+    .bg-bottom-menu-add {
+        position: absolute;
+        height: 50px;
+        border: 1px solid #e7e7eb;
+        width: 92px;
+        font-size: 25px;
+    }
+
+    .bg-bottom-menu-lists {
+        position: absolute;
+        bottom: 0;
+        width: 92px;
+    }
+
+    .bg-bottom-menu-list {
+        height: 50px;
+        border: 1px solid #e7e7eb;
+    }
+
+    .bg-bottom-menu-list-active {
+        border: 1px solid #44b549;
+        color: #44b549;
+    }
+
+    .main-btn {
+        width: 200px;
+        margin:0 auto;
+        height: 35px;
+        background: #e74c3c;
+        color: white;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 5px;
+        margin-top: 15px;
+    }
+
+    .main-real-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+</style>
+<body>
+<div id="app">
+    <div class="main">
+        <div class="main-left">
+            <div class="bg-top"></div>
+            <div class="main-left-empty"></div>
+            <div class="bg-bottom">
+                <div class="bg-bottom-menu" :class="menuindex==index&&lock?'bg-bottom-menu-active':''"
+                     v-for="(item, index) in button" :data-id="index" @click="menuclick">{{item.name}}
+                    <div class="bg-bottom-menu-main" :class="menushow==index?'bg-bottom-menu-main-active':''">
+                        <div class="bg-bottom-menu-triangle"></div>
+                        <div class="bg-bottom-menu-add" :data-index="index" @click.stop="menuadd">+</div>
+                        <div class="bg-bottom-menu-lists">
+                            <div class="bg-bottom-menu-list"
+                                 :class="childmenuindex==indexs?'bg-bottom-menu-list-active':''"
+                                 v-for="(items, indexs) in item.sub_button" :data-index="indexs"
+                                 @click.stop="childmenuclick">{{items.name}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-if="button.length==0" class="bg-bottom-menu border-right-none"
+                     style="font-size: 25px;width: 272px"
+                     @click="menuadd">+
+                </div>
+                <div v-if="button.length==1" class="bg-bottom-menu border-right-none"
+                     style="font-size: 25px;width: 182px"
+                     @click="menuadd">+
+                </div>
+                <div v-if="button.length==2" class="bg-bottom-menu border-right-none" style="font-size: 25px;"
+                     @click="menuadd">+
+                </div>
+            </div>
+        </div>
+        <div class="main-real-right">
+            <div class="main-right" v-if="menuindex==-1"
+                 style="height: 100%;justify-content: center;align-items: center">
+                点击左侧菜单进行编辑
+            </div>
+            <div class="main-right" v-if="menuindex!=-1">
+                <div class="main-right-head">
+                    <div>菜单详情</div>
+                    <div class="main-del-menu" @click.stop="delmenu">删除菜单</div>
+                </div>
+                <div class="main-right-body">
+                    <div class="main-right-body-title">
+                        <div>菜单标题：</div>
+                        <input type="text" v-model="title">
+                    </div>
+                    <div v-if="type!=''" class="main-right-body-type">
+                        <div>菜单内容：</div>
+                        <input type="radio" name="type" :checked="type=='click'?true:false" value="click"
+                               v-model="type">
+                        <div class="main-right-body-type-title">发送消息</div>
+                        <input type="radio" name="type" :checked="type=='view'?true:false" value="view" v-model="type">
+                        <div class="main-right-body-type-title">跳转网页</div>
+                        <input type="radio" name="type" :checked="type=='miniprogram'?true:false" value="miniprogram"
+                               v-model="type">
+                        <div>跳转小程序</div>
+                    </div>
+                    <!--发送消息-->
+                    <div v-if="type=='click'" class="main-right-body-content">
+                        <div class="main-right-body-content-news">
+                            <div class="main-right-body-content-send" style="margin-right: 50px">
+                                <div class="font-size30">+</div>
+                                <div class="main-right-body-content-send-btn">选择现有资源</div>
+                            </div>
+                            <div class="main-right-body-content-send">
+                                <div class="font-size30">+</div>
+                                <div class="main-right-body-content-send-btn">添加新资源</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--跳转网页-->
+                    <div v-if="type=='view'" class="main-right-body-content">
+                        <div class="main-right-body-content-title">点击该子菜单会跳到以下链接</div>
+                        <div class="main-right-body-content-view">
+                            <div class="main-right-body-content-view-title">页面地址：</div>
+                            <input type="text" v-model="url">
+                        </div>
+                    </div>
+                    <!--跳转小程序-->
+                    <div v-if="type=='miniprogram'" class="main-right-body-content">
+                        <div class="main-right-body-content-title">点击该菜单会跳到以下小程序</div>
+                        <div class="main-right-body-content-view">
+                            <div class="main-right-body-content-view-title">小程序ID：</div>
+                            <input type="text" v-model="appid">
+                        </div>
+                        <div class="main-right-body-content-view">
+                            <div class="main-right-body-content-view-title">小程序页面路径：</div>
+                            <input type="text" v-model="pagepath">
+                        </div>
+                        <div class="main-right-body-content-view">
+                            <div class="main-right-body-content-view-title">页面地址：</div>
+                            <input type="text" v-model="url">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-btn" @click.stop="savesend">保存并发布</div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            menushow: -1,//子菜单显示隐藏
+            type: '',//当前菜单type
+            lock: true,//底部菜单颜色锁，选中子菜单时lock为false，底部菜单无背景色
+            menuindex: -1,//当前被点击底部主菜单索引值
+            childmenuindex: -1,//当前被点击子菜单索引值
+            title: '',//当前菜单标题
+            url: '',//当前页面地址
+            appid: '',//当前小程序ID
+            pagepath: '',//当前小程序页面路径
+            button: [
+                {
+                    "type": "click",
+                    "name": "今日歌曲",
+                    "key": "V1001_TODAY_MUSIC",
+                },
+                {
+                    "name": "菜单",
+                    "sub_button": [
+                        {
+                            "type": "view",
+                            "name": "搜索",
+                            "url": "http://www.soso.com/"
+                        },
+                        {
+                            "type": "miniprogram",
+                            "name": "wxa",
+                            "url": "http://mp.weixin.qq.com",
+                            "appid": "wx286b93c14bbf93aa",
+                            "pagepath": "pages/lunar/index"
+                        },
+                        {
+                            "type": "click",
+                            "name": "赞一下我们",
+                            "key": "V1001_GOOD"
+                        }]
+                }
+            ]
+        },
+        //数据变化监听事件
+        watch: {
+            title(val) {
+                var that = this;
+                if (that.lock) {
+                    that.button[that.menuindex].name = val;
+                } else {
+                    that.button[that.menuindex].sub_button[that.childmenuindex].name = val;
+                }
+            },
+            type(val) {
+                var that = this;
+                if (that.lock) {
+                    that.button[that.menuindex].type = val;
+                } else {
+                    that.button[that.menuindex].sub_button[that.childmenuindex].type = val;
+                }
+            },
+            url(val) {
+                var that = this;
+                if (that.lock) {
+                    that.button[that.menuindex].url = val;
+                } else {
+                    that.button[that.menuindex].sub_button[that.childmenuindex].url = val;
+                }
+            },
+            appid(val) {
+                var that = this;
+                if (that.lock) {
+                    that.button[that.menuindex].appid = val;
+                } else {
+                    that.button[that.menuindex].sub_button[that.childmenuindex].appid = val;
+                }
+            },
+            pagepath(val) {
+                var that = this;
+                if (that.lock) {
+                    that.button[that.menuindex].pagepath = val;
+                } else {
+                    that.button[that.menuindex].sub_button[that.childmenuindex].pagepath = val;
+                }
+            }
+        },
+        mounted: function () {
+
+        },
+        methods: {
+            //底部菜单点击事件
+            menuclick(e) {
+                var that = this;
+                that.lock = true;
+                var id = e.currentTarget.dataset.id;
+                if (that.menushow == id) {
+                    that.menushow = -1;
+                } else {
+                    that.menuindex = id;
+                    that.menushow = id;
+                    that.childmenuindex = -1;
+                }
+                if (that.button[id].sub_button) {
+                    that.type = '';
+                } else {
+                    that.type = that.button[id].type;
+                    that.url = that.button[id].url;
+                    that.appid = that.button[id].appid;
+                    that.pagepath = that.button[id].pagepath;
+                }
+                that.title = that.button[id].name;
+            },
+            //子菜单点击事件
+            childmenuclick(e) {
+                var that = this;
+                var index = e.currentTarget.dataset.index;
+                that.lock = false;
+                that.childmenuindex = index;
+                that.type = that.button[that.menuindex].sub_button[index].type;
+                that.title = that.button[that.menuindex].sub_button[index].name;
+                that.url = that.button[that.menuindex].sub_button[index].url;
+                that.appid = that.button[that.menuindex].sub_button[index].appid;
+                that.pagepath = that.button[that.menuindex].sub_button[index].pagepath;
+            },
+            //所有加号点击事件
+            menuadd(e) {
+                var that = this;
+                var index = e.currentTarget.dataset.index;
+                if (index) {
+                    that.lock = false;
+                    if (that.button[index].sub_button) {
+                        that.button[index].sub_button.push({name: '添加子菜单', type: 'click'});
+                        that.childmenuindex = that.button[index].sub_button.length - 1;
+                    } else {
+                        that.$set(that.button[index], 'sub_button', [{name: '添加子菜单', type: 'click'}])
+                        that.childmenuindex = 0
+                    }
+                } else {
+                    that.button.push({name: '添加菜单', type: 'click'});
+                    that.menuindex = that.button.length - 1;
+                    that.menuclick({currentTarget: {dataset: {id: that.menuindex}}})
+                }
+            },
+            //删除菜单事件
+            delmenu() {
+                var that = this;
+                if (that.lock) {
+                    if (!that.button[that.menuindex].sub_button || that.button[that.menuindex].sub_button.length == 0) {
+                        that.button.splice(that.menuindex, 1);
+                        if (that.button.length == 0) {
+                            that.menuindex = -1;
+                        } else {
+                            that.menuclick({currentTarget: {dataset: {id: 0}}})
+                        }
+                    } else {
+                        alert("存在子菜单，请先删除子菜单")
+                    }
+                } else {
+                    that.button[that.menuindex].sub_button.splice(that.childmenuindex, 1);
+                    if (that.button[that.menuindex].sub_button.length == 0) {
+                        that.lock == true
+                        that.menuclick({currentTarget: {dataset: {id: that.menuindex}}})
+                    } else {
+                        that.childmenuclick({currentTarget: {dataset: {index: 0}}})
+                    }
+                }
+            },
+            //保存并发送
+            savesend() {
+                var that = this;
+                console.log(that.button);
+            }
+        }
+    })
+</script>
+</body>
+</html>
