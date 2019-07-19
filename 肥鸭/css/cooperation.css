@@ -1,0 +1,313 @@
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+a:link{
+    text-decoration:none;
+    /* 指正常的未被访问过的链接*/
+}
+a:visited{
+    text-decoration:none;
+    /*指已经访问过的链接*/
+}a:hover{
+     text-decoration:none;
+     color: #FBC226;
+     /*指鼠标在链接*/
+ }
+a:active{
+    text-decoration:none;
+    /* 指正在点的链接*/
+}
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; }
+table { border-collapse:collapse; border-spacing:0; }
+
+@media screen and (max-width:1350px) {
+    body .head nav{
+        font-size: 0.36rem;
+    }
+    body .logo{
+        margin-left: 10%;
+    }
+    body .head nav{
+        margin-left: 10%;
+    }
+}
+@media screen  and (max-width: 1300px){
+    body .logo{
+        margin-left: 6%;
+    }
+    body .head nav{
+        margin-left: 6%;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .spots-c-title .title-b{
+        font-size: 0.4rem;
+    }
+    .spots-c-title .more{
+        font-size: 0.28rem;
+    }
+}
+@media screen  and (max-width: 1000px){
+    body .head nav{
+        font-size: 0.32rem;
+    }
+    body .logo{
+        margin-left: 1%;
+    }
+    body .head nav{
+        margin-left: 5%;
+    }
+}
+html{
+    font-size: 312.5%;
+    min-width: 1000px;
+}
+
+.head{
+    width: 100%;
+    height: 1.76rem;
+    line-height: 1.76rem;
+    background-color: #fff;
+}
+.logo{
+    width: 176px;
+    height: 81px;
+    float: left;
+    margin-left: 17%;
+
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+.head nav{
+    margin-left: 15%;
+    float: left;
+    height: 100%;
+    font-size: 0.4rem;
+
+    text-align: center;
+    overflow: hidden;
+
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li{
+
+    margin: 0 0.3rem;
+    height: 100%;
+}
+nav ul li a{
+    color: #333;
+    margin-top: 22px;
+    height: 50%;
+    display: block;
+    line-height: 44px;
+
+}
+nav ul li a:hover{
+    color: #FBC226;
+}
+nav ul li.cur a{
+    color: #FBC226;
+    border-bottom: 3px solid #FBC226;
+}
+.content{
+    width: 100%;
+    height: auto;
+}
+.content{
+    width: 100%;
+    height: 1240px;
+    background-image: url('../img/cooperation-bg.png');
+    background-size: 100% 100% ;
+    border-top: 1px solid #fff;
+    box-sizing: border-box;
+}
+.writeform{
+    width: 546px;
+    height: 687px;
+    margin: 40px auto;
+    background-color: #fff;
+    box-shadow:0px 0px 20px rgba(100,74,2,0.16);
+    border-radius: 12px;
+    border: 1px solid #fff;
+}
+.form-list{
+    width: 426px;
+    height: 44px;
+    border:1px solid rgba(223,223,223,1);
+    border-radius: 4px;
+    margin: 10px auto 0;
+}
+.form-list:nth-child(1){
+    margin-top: 60px;
+}
+.form-list-title{
+    width: 80px;
+    height: 100%;
+    line-height: 44px;
+    font-size: 0.32rem;
+    color: #333;
+    float: left;
+    margin-left: 12px;
+}
+.form-list-input{
+    width: 330px;
+    height: 100%;
+    float: right;
+    border: none;
+    font-size: 0.32rem;
+    color: #999;
+    text-indent: 1em;
+}
+.sex{
+    border: none;
+}
+.sex-l{
+    width: 271px;
+    height: 100%;
+    float: left;
+    border:1px solid rgba(223,223,223,1);
+    border-radius: 4px;
+}
+#sex,#papers,#job{
+    width: 179px;
+}
+.sex-r{
+    height: 100%;
+    float: right;
+    width: 152px;
+}
+.sex-male,.sex-female,.full-time,.part-time,.papers-card,.papers-other{
+    width:48.69%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    color: #FBC226;
+    border: 1px solid #FBC226;
+}
+.sex-male,.full-time,.papers-card{
+    border-radius:4px 0px 0px 4px;
+}
+.sex-female,.part-time,.papers-other{
+    border-radius:0px 4px 4px 0px;
+}
+.male-pic,.femle-pic,.full-time-pic,.part-time-pic,.papers-card-pic,.papers-other-pic{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 7px 0 7px 5px;
+    font-size: 0;
+}
+.male-pic img,.femle-pic img,.full-time-pic img,.part-time-pic img,.papers-card-pic img,.papers-other-pic img{
+    width: 100%;
+    height: 100%;
+}
+.sex-male span,.sex-female span,.full-time span,.part-time span,.papers-card span,.papers-other span{
+    display: block;
+    float: left;
+    height: 100%;
+    width: 30px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 12px;
+}
+.papers-card span{
+     width: 38px;
+ }
+.sex-cur,.job-cur,.papers-cur{
+    color: #fff;
+    background-color: #FBC226;
+}
+.job,.papers{
+    border: none;
+}
+.form-list-img{
+    width: 426px;
+    height: 80px;
+    margin: 10px auto 0;
+}
+.form-list-img-l,.form-list-img-r{
+    font-size: 0.32rem;
+    color: #666;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.uploadimg-p{
+    width: 121px;
+    height: 80px;
+    background-color: #eee;
+    float: right;
+    position: relative;
+
+}
+.img-title{
+    width: 64px;
+    height: 22px;
+    float: left;
+    margin-left: 12px;
+}
+.uploadimg-cover{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+
+}
+.uploadimg-cover span:nth-child(1){
+    width: 100%;
+    height: 30px;
+    display: block;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+.upload-show-img{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.upload-show-img img{
+    width: 100%;
+    height: 100%;
+}
+.uploadimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor:pointer;
+    z-index: 9;
+}
+.btn-sub{
+    display: block;
+    border: none;
+    margin: 30px auto;
+    width: 351px;
+    height: 40px;
+    background:linear-gradient(332deg,rgba(255,219,77,1) 0%,rgba(255,206,71,1) 100%);
+    border-radius: 4px;
+    font-size: 0.36rem;
+    color: #fff;
+}

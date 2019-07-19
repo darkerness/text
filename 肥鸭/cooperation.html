@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1, user-scalable=0" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9">
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>小肥鸭官网</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cooperation.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/City_data.js"></script>
+    <script src="js/areadata.js"></script>
+    <script src="js/auto_area.js"></script>
+
+</head>
+<body style="background-color: #eee;">
+
+<div class="head">
+    <div class="logo"><img src="img/logo.png" alt=""></div>
+    <nav>
+        <ul>
+            <li class="cur">  <a href="#">首页  </a></li>
+            <li><a href="#">账号 </a></li>
+            <li><a href="#">小肥鸭概况 </a></li>
+            <li><a href="#">小肥鸭产品 </a></li>
+            <li><a href="#">入驻平台   </a></li>
+            <li> <a href="#">联系我们 </a></li>
+            <li> <a href="#">加入我们</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="content">
+    <div class="writeform">
+        <form action="">
+        <div class="form-list">
+            <div class="form-list-title">真实姓名：</div>
+            <input type="text" class="form-list-input" placeholder="与身份证或者其他证明文件上一致" id="realname">
+        </div>
+
+            <div class="form-list">
+                <div class="form-list-title">手机号码：</div>
+                <input type="tel" class="form-list-input" placeholder="请输入手机号码" id="phone">
+            </div>
+
+            <div class="form-list">
+                <div class="form-list-title">QQ&nbsp;号码：</div>
+                <input type="text" class="form-list-input" placeholder="营运人员将在一周内通过QQ与您联系" id="qqnum">
+            </div>
+
+            <div class="form-list sex">
+                <div class="sex-l">
+                <div class="form-list-title">性&emsp;&emsp;别：</div>
+                <input type="text" class="form-list-input" id="sex" onfocus="this.blur();">
+                </div>
+                <div class="sex-r">
+                    <div class="sex-male sex-cur sex-box">
+                        <div class="male-pic"><img src="img/male-selected.png" alt=""></div>
+                        <span>男</span>
+                    </div>
+                    <div class="sex-female sex-box">
+                        <div class="femle-pic"><img src="img/femle-select.png" alt=""></div>
+                        <span>女</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-list">
+                <div class="form-list-title">所在城市</div>
+                <input type="text" class="form-list-input area-danxuan"  value="" data-value="" onfocus="this.blur();" placeholder="点击所在城市" id="city">
+            </div>
+
+            <div class="form-list job">
+                <div class="sex-l">
+                    <div class="form-list-title">目前职业：</div>
+                    <input type="text" class="form-list-input" id="job" onfocus="this.blur();">
+                </div>
+                <div class="sex-r">
+                    <div class="full-time job-cur job-box">
+                        <div class="full-time-pic"><img src="img/full-time-s.png" alt=""></div>
+                        <span>全职</span>
+                    </div>
+                    <div class="part-time job-box">
+                        <div class="part-time-pic"><img src="img/part-time.png" alt=""></div>
+                        <span>兼职</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-list papers">
+                <div class="sex-l">
+                    <div class="form-list-title">证件类型：</div>
+                    <input type="text" class="form-list-input" id="papers" onfocus="this.blur();">
+                </div>
+                <div class="sex-r">
+                    <div class="papers-card papers-cur papers-box">
+                        <div class="papers-card-pic"><img src="img/papers-card-s.png" alt=""></div>
+                        <span>身份证</span>
+                    </div>
+                    <div class="papers-other papers-box">
+                        <div class="papers-other-pic"><img src="img/papers-other.png" alt=""></div>
+                        <span>其他</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-list">
+                <div class="form-list-title">证件号码：</div>
+                <input type="text" class="form-list-input" placeholder="请准确填写身份证号码" id="idcard">
+            </div>
+
+            <div class="form-list-img">
+                <div class="form-list-img-l">
+                    <div class="img-title">证件正面</div>
+                    <div class="uploadimg-p">
+                        <div class="uploadimg-cover">
+                            <span>+</span>
+
+                            <span>上传图片</span>
+                            <div class="upload-show-img"><img class="show-img1" src="" alt=""></div>
+                        </div>
+                    <input type="file"  name="file" id="file1" class="uploadimg">
+                    </div>
+                </div>
+                <div class="form-list-img-r">
+                    <div class="img-title">证件背面</div>
+                    <div class="uploadimg-p">
+                        <div class="uploadimg-cover">
+                            <span>+</span>
+                            <span>上传图片</span>
+                            <div class="upload-show-img"><img class="show-img2" src="" alt=""></div>
+                        </div>
+                        <input type="file"  name="file" id="file2" class="uploadimg">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-sub">提交</button>
+        </form>
+    </div>
+
+</div>
+<script>
+    $(function () {
+        $('nav li').click(function () {
+
+            $(this).addClass('cur').siblings().removeClass('cur');
+
+        })
+
+        //检查手机号
+        function checkMobile(){
+            var _phone = $("#phone").val();
+            if(!(/^1[3|4|5|8][0-9]\d{8}$/.test(_phone))){
+                alert("不是完整的11位手机号或者正确的手机号");
+                return false;
+            }
+        }
+
+
+
+        //性别选择
+        $('.sex-box').click(function () {
+            $(this).addClass('sex-cur').siblings().removeClass("sex-cur");
+
+            if($(".sex-male").hasClass("sex-cur")){
+                $(".sex-male").find("img").attr("src","img/male-selected.png");
+                $(".sex-female").find("img").attr("src","img/femle-select.png");
+                $("#sex").val($(this).find("span").text());
+            }
+            else {
+                $(".sex-female").find("img").attr("src","img/femle-selected.png");
+                $(".sex-male").find("img").attr("src","img/male-select.png");
+                $("#sex").val($(this).find("span").text());
+            }
+        })
+
+        //获取城市
+        console.log($('#city').val());
+
+        //全职兼职选择
+        $('.job-box').click(function () {
+            $(this).addClass('job-cur').siblings().removeClass("job-cur");
+
+            if($(".full-time").hasClass("job-cur")){
+                $(".full-time").find("img").attr("src","img/full-time-s.png");
+                $(".part-time").find("img").attr("src","img/part-time.png");
+                $("#job").val($(this).find("span").text());
+            }
+            if($(".part-time").hasClass("job-cur")){
+                $(".part-time").find("img").attr("src","img/part-time-s.png");
+                $(".full-time").find("img").attr("src","img/full-time.png");
+                $("#job").val($(this).find("span").text());
+            }
+        })
+
+        //证件类型选择
+        $('.papers-box').click(function () {
+            $(this).addClass('papers-cur').siblings().removeClass("papers-cur");
+
+            if($(".papers-card").hasClass("papers-cur")){
+                $(".papers-card").find("img").attr("src","img/papers-card-s.png");
+                $(".papers-other").find("img").attr("src","img/papers-other.png");
+                $("#papers").val($(this).find("span").text());
+            }
+            if($(".papers-other").hasClass("papers-cur")){
+                $(".papers-other").find("img").attr("src","img/papers-other-s.png");
+                $(".papers-card").find("img").attr("src","img/papers-card.png");
+                $("#papers").val($(this).find("span").text());
+            }
+        })
+
+
+        //上传图片
+
+
+        $("#file1").change(function() {
+            var readFile = new FileReader();
+            var mfile = $("#file1")[0].files[0];  //注意这里必须时$("#myfile")[0]，document.getElementById('file')等价与$("#myfile")[0]
+            readFile.readAsDataURL(mfile);
+            readFile.onload = function() {
+                var img = $(".show-img1");
+                img.attr("src", this.result);
+            }
+        });
+
+        $("#file2").change(function() {
+            var readFile = new FileReader();
+            var mfile = $("#file2")[0].files[0];  //注意这里必须时$("#myfile")[0]，document.getElementById('file')等价与$("#myfile")[0]
+            readFile.readAsDataURL(mfile);
+            readFile.onload = function() {
+                var img = $(".show-img2");
+                img.attr("src", this.result);
+            }
+        });
+    })
+</script>
+</body>
+</html>
