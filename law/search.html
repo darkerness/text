@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>搜索</title>
+		<link rel="stylesheet" type="text/css" href="./css/law.css" />
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" type="text/css" href="./css/hack.css"/>
+		<![endif]-->
+		<script src="./js/jquery1.11.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="w1160 clearfix" style="position: relative;">
+				<div class="logo fl mat20">
+					<a href="index.html"><img src="img/logo.png" width="176" height="50" ></a>
+				</div>
+				<ul class="nav fl">
+					<li><a href="index.html">有法可e<i></i></a></li>
+					<li><a href="consult.html">快速咨询<i></i></a></li>
+					<li><a href="download.html">文书下载<i></i></a></li>
+					<li><a href="legal.html">法律专题<i></i></a></li>
+					<li><a href="person.html">个人设置<i></i></a></li>
+				</ul>
+				<div class="search fl">
+					<form>
+						<input type="submit" class="btn" onclick="location.href='search.html'">
+						<input type="text"  class="text" placeholder="搜索文书">
+					</form>
+				</div>
+				<div class="login_box">
+					<!-- 登录状态 -->
+					<!-- <div>
+						<span>15259714311</span>&ensp;|&ensp;<a href="#">退出</a>
+					</div> -->
+					<div>
+						<a href="javascript:;" data-show="#login">登入</a>&ensp;/&ensp;<a href="javascript:;"  data-show="#reg">注册</a>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="modal" id="login">
+			<div class="black"></div>
+			<form  validate>  <!-- validate 需要验标识 -->
+				<div class="login content">
+					<a href="javascript:;" class="close"></a>
+					<h2 class="title">用户登入</h2>
+					<div class="input_box">
+						<input type="text" placeholder="输入手机号" class="input"  name="phone">
+						<p class="err"></p>
+					</div>
+					<div class="input_box">
+						<input type="text" placeholder="输入短信验证码" class="input"  name="code">
+						<p class="err"></p>
+						<a href="javascript:;" class="code">获取验证码</a>
+					</div>
+					<input type="button" class="btn submit" value="登入"/>
+				</div>
+			</form>
+		</div>
+		
+		<div class="modal" id="reg">
+			<div class="black"></div>
+			<form action="" validate> 
+				<div class="login content">
+					<a href="javascript:;" class="close"></a>
+					<h2 class="title">用户注册</h2>
+					<div class="input_box">
+						<input type="text" placeholder="输入手机号" class="input" name="phone">
+						<p class="err"></p>
+					</div>
+					<div class="input_box">
+						<input type="text" placeholder="输入短信验证码" class="input" name="code">
+						<p class="err"></p>
+						<a href="javascript:;" class="code">获取验证码</a>
+					</div>
+					<input type="button" class="btn submit" value="注册"/>
+				</div>
+			</form>
+		</div>
+		<!-- 以上为通用头部 -->
+		<div class="search_page w1160">
+			<div class="fl slide_lt">
+				<h2 class="list_title mat20" style="margin-left: 20px;"><i></i>所有查询分类</h2>
+				<ul class="cate_ul" id="cate_ul">
+					<li class="list active">
+						<a href="#" class="txt">创业经营<i class="inline icon_back"></i></a>
+						<div class="subCate">
+							<a href="#">公司章程</a>
+							<a href="#" class="on">公司章程</a>
+							<a href="#">公司章程公司章程公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+							<a href="#">公司章程</a>
+						</div>
+					</li>
+					<li class="list">
+						<a href="#" class="txt">劳动人事<i class="inline icon_back"></i></a>
+						<div class="subCate"><a href="#">公司章程</a></div>	
+					</li>
+					<li class="list">
+						<a href="#" class="txt">债权债务<i class="inline icon_back"></i></a>
+						<div class="subCate"><a href="#">公司章程</a></div>	
+					</li>
+					<li class="list">
+						<a href="#" class="txt">买卖租房<i class="inline icon_back"></i></a>
+						
+					</li>
+					<li class="list">
+						<a href="#" class="txt">买卖购销<i class="inline icon_back"></i></a>
+					</li>
+					<li class="list">
+						<a href="#" class="txt">买卖购销<i class="inline icon_back"></i></a>
+					</li>
+					<li class="list">
+						<a href="#" class="txt">买卖购销<i class="inline icon_back"></i></a>
+					</li>
+					<li class="list">
+						<a href="#" class="txt">其 他<i class="inline icon_back"></i></a>
+					</li>
+					<li class="list">
+						<a href="#" class="txt">各行业合同<i class="inline icon_back"></i></a>
+						<div class="subCate">
+							<a href="#">公司章程</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="fr con_ri">
+				<h2 class="list_title mat20" style="margin-left: 20px;"><i></i>欠款</h2>
+				<!-- 15条数据 -->
+				<ul class="search_ul">
+					<li>
+						<a href="download_example.html" class="fl search_lt">
+							<i class="inline icon_world"></i>欠款欠条范本欠款欠条范本欠款欠条范本欠款欠条范本欠款欠条范本
+						</a>
+						<a href="#" class="fr search_ri">
+							<i class="inline icon_down"></i>12121
+						</a>
+					</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<div style="margin-top:84px;">
+					<div class="page">
+						<a href="#">首页</a>
+						<a href="#">下一页</a>
+						<span class="cl_blue">30</span>
+						<a href="#">下一页</a>
+						<a href="#">尾页</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer bg_white">
+			<p class="mat40">泉州小肥鸭软件服务有限公司&emsp;客服电话：400-866-1234</p>
+			<p class="mat10">COPYRIGHTZ  ©2012-2017 ilvdo.com, ALLRights Reserved 闽ICP备12060410号-1 经营许可证编号：闽B2-20162058</p>
+		</div>
+		
+		<script type="text/javascript">
+			$("#cate_ul").slide({
+				type: "menu",
+				titCell: ".list",
+				targetCell: ".subCate",
+				delayTime: 0,
+				triggerTime: 0,
+				defaultPlay: false,
+				returnDefault: true,
+				startFun:function(cur,total,obj,tit){
+					var $subCate=$(obj).find("li").eq(cur).find(".subCate");
+					 $subCate.css('top',-($subCate.innerHeight()/2-20));
+				}
+			});
+		</script>
+		
+	</body>
+</html>

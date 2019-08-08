@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>文书下载</title>
+		<link rel="stylesheet" type="text/css" href="./css/law.css" />
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" type="text/css" href="./css/hack.css"/>
+		<![endif]-->
+		<script src="./js/jquery1.11.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="w1160 clearfix" style="position: relative;">
+				<div class="logo fl mat20">
+					<a href="index.html"><img src="img/logo.png" width="176" height="50" ></a>
+				</div>
+				<ul class="nav fl">
+					<li><a href="index.html">有法可e<i></i></a></li>
+					<li><a href="consult.html">快速咨询<i></i></a></li>
+					<li class="active"><a href="download.html">文书下载<i></i></a></li>
+					<li><a href="legal.html">法律专题<i></i></a></li>
+					<li><a href="person.html">个人设置<i></i></a></li>
+				</ul>
+				<div class="search fl">
+					<form>
+						<input type="submit" class="btn" onclick="location.href='search.html'">
+						<input type="text"  class="text" placeholder="搜索文书">
+					</form>
+				</div>
+				<div class="login_box">
+					<!-- 登录状态 -->
+					<!-- <div>
+						<span>15259714311</span>&ensp;|&ensp;<a href="#">退出</a>
+					</div> -->
+					<div>
+						<a href="javascript:;" data-show="#login">登入</a>&ensp;/&ensp;<a href="javascript:;"  data-show="#reg">注册</a>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="modal" id="login">
+			<div class="black"></div>
+			<form  validate>  <!-- validate 需要验标识 -->
+				<div class="login content">
+					<a href="javascript:;" class="close"></a>
+					<h2 class="title">用户登入</h2>
+					<div class="input_box">
+						<input type="text" placeholder="输入手机号" class="input"  name="phone">
+						<p class="err"></p>
+					</div>
+					<div class="input_box">
+						<input type="text" placeholder="输入短信验证码" class="input"  name="code">
+						<p class="err"></p>
+						<a href="javascript:;" class="code">获取验证码</a>
+					</div>
+					<input type="button" class="btn submit" value="登入"/>
+				</div>
+			</form>
+		</div>
+		
+		<div class="modal" id="reg">
+			<div class="black"></div>
+			<form action="" validate> 
+				<div class="login content">
+					<a href="javascript:;" class="close"></a>
+					<h2 class="title">用户注册</h2>
+					<div class="input_box">
+						<input type="text" placeholder="输入手机号" class="input" name="phone">
+						<p class="err"></p>
+					</div>
+					<div class="input_box">
+						<input type="text" placeholder="输入短信验证码" class="input" name="code">
+						<p class="err"></p>
+						<a href="javascript:;" class="code">获取验证码</a>
+					</div>
+					<input type="button" class="btn submit" value="注册"/>
+				</div>
+			</form>
+		</div>
+		<!-- 以上为通用头部 -->
+		
+		<div class="w1160">
+			<h2 class="common_title">各种文书 在线下载</h2>
+			<div class="mat60">
+				<h2 class="list_title"><i></i>全部分类</h2>
+				<ul class="down_list cleafix" id="downTab">
+					<li class="active"><a href="javascript:;">创业经营</a></li>
+					<li><a href="javascript:;">劳动人事</a></li>
+					<li><a href="javascript:;">债权债务</a></li>
+					<li><a href="javascript:;">买卖租房</a></li>
+					<li><a href="javascript:;">买卖购销</a></li>
+					<li><a href="javascript:;">婚姻家庭</a></li>
+					<li><a href="javascript:;">诉讼文书</a></li>
+					<li><a href="javascript:;">其 他</a></li>
+					<li><a href="javascript:;">各行业合同</a></li>
+				</ul>
+			</div>
+			<div class="download" id="download">
+				<!-- 循环标题次数 -->
+				<div class="slide clearfix downloadList">
+					<div class="bd">
+						<ul class="down_ul">
+							<li>
+								<div class="box">
+									<div class="label"><img src="img/down_label1.png"  width="60" height="60"></div>
+									<h3 class="f20px mat20 tc">合伙协议</h3>
+									<div class="mat20">
+										<h4 class="f16px">各项目</h4>
+										<div class="select">
+											<a href="download_example.html">战略合作</a>
+											<a href="download_example.html">战略合作</a>
+											<a href="#">代理商合作</a>
+											<a href="#">代理商合作</a>
+											<a href="#">代理商合作</a>
+											<a href="download_more.html" class="f16px dot">...</a>
+										</div>
+									</div>
+									<div class="mat20">
+										<h4 class="f16px">各项目</h4>
+										<div class="select">
+											<a href="#">战略合作</a>
+											<a href="#">战略合作</a>
+											<a href="#">代理商合作</a>
+											<a href="#">代理商合作</a>
+											<a href="#">代理商合作</a>
+											<a href="download_more.html" class="f16px dot">...</a>
+										</div>
+									</div>
+									<div class="mat20">
+										<h4 class="f16px">各项目</h4>
+										<div class="select">
+											<a href="#">战略合作</a>
+											<a href="#">战略合作</a>
+											<a href="#">代理商合作</a>
+											<a href="#">代理商合作</a>
+										</div>
+									</div>
+									<a href="download_more.html" class="more">查看更多</a>
+								</div>
+							</li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							
+						</ul>
+					</div>
+					<div class="hd">
+						<ul></ul>
+					</div>
+				</div>
+				
+				<div class="slide clearfix downloadList">
+					<div class="bd">
+						<ul class="down_ul">
+							<li>1</li>
+						</ul>
+					</div>
+					<div class="hd">
+						<ul></ul>
+					</div>
+				</div>
+				
+				<div class="slide clearfix downloadList">
+					<div class="bd">
+						<ul class="down_ul">
+							<li>2</li>
+						</ul>
+					</div>
+					<div class="hd">
+						<ul></ul>
+					</div>
+				</div>
+				
+				
+				<div class="slide clearfix downloadList">
+					<div class="bd">
+						<ul class="down_ul">
+							<li>3</li>
+						</ul>
+					</div>
+					<div class="hd">
+						<ul></ul>
+					</div>
+				</div>
+				<div class="slide clearfix downloadList">
+					<div class="bd">
+						<ul class="down_ul">
+							<li>4</li>
+						</ul>
+					</div>
+					<div class="hd">
+						<ul></ul>
+					</div>
+				</div>
+				<!-- 结束 -->
+				
+			</div>
+			
+		</div>	
+		<div class="footer bg_white">
+			<p class="mat40">泉州小肥鸭软件服务有限公司&emsp;客服电话：400-866-1234</p>
+			<p class="mat10">COPYRIGHTZ  ©2012-2017 ilvdo.com, ALLRights Reserved 闽ICP备12060410号-1 经营许可证编号：闽B2-20162058</p>
+		</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				var liInd=$("#downTab .active").index("#downTab li");
+				$("#download .downloadList").eq(liInd).show();
+				$("#downTab li").click(function(){
+					$(this).addClass("active").siblings().removeClass("active");
+					$("#download .downloadList").hide().eq($(this).index()).show();
+				})
+				$(".downloadList").slide({
+					mainCell: ".bd ul",
+					titCell: ".hd ul",
+					effect: "left",
+					autoPage: true,
+					delayTime: 500,
+					interTime: 5000,
+					vis:4,
+					scroll:4
+				});
+			})
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>有法可e</title>
+		<link rel="stylesheet" type="text/css" href="./css/law.css" />
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" type="text/css" href="./css/hack.css"/>
+		<![endif]-->
+		<script src="./js/jquery1.11.2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="w1160 clearfix" style="position: relative;">
+				<div class="logo fl mat20">
+					<a href="index.html"><img src="img/logo.png" width="176" height="50" ></a>
+				</div>
+				<ul class="nav fl">
+					<li class="active"><a href="index.html">有法可e<i></i></a></li>
+					<li><a href="consult.html">快速咨询<i></i></a></li>
+					<li><a href="download.html">文书下载<i></i></a></li>
+					<li><a href="legal.html">法律专题<i></i></a></li>
+					<li><a href="person.html">个人设置<i></i></a></li>
+				</ul>
+				<div class="search fl">
+					<form>
+						<input type="submit" class="btn" onclick="location.href='search.html'">
+						<input type="text"  class="text" placeholder="搜索文书">
+					</form>
+				</div>
+				<div class="login_box">
+					<!-- 登录状态 -->
+					<!-- <div>
+						<span>15259714311</span>&ensp;|&ensp;<a href="#">退出</a>
+					</div> -->
+					<div>
+						<a href="javascript:;" data-show="#login">登入</a>&ensp;/&ensp;<a href="javascript:;"  data-show="#reg">注册</a>
+					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="modal" id="login">
+			<div class="black"></div>
+			<form  validate>  <!-- validate 需要验标识 -->
+				<div class="login content">
+					<a href="javascript:;" class="close"></a>
+					<h2 class="title">用户登入</h2>
+					<div class="input_box">
+						<input type="text" placeholder="输入手机号" class="input"  name="phone">
+						<p class="err"></p>
+					</div>
+					<div class="input_box">
+						<input type="text" placeholder="输入短信验证码" class="input"  name="code">
+						<p class="err"></p>
+						<a href="javascript:;" class="code">获取验证码</a>
+					</div>
+					<input type="button" class="btn submit" value="登入"/>
+				</div>
+			</form>
+		</div>
+		
+		<div class="modal" id="reg">
+			<div class="black"></div>
+			<form action="" validate> 
+				<div class="login content">
+					<a href="javascript:;" class="close"></a>
+					<h2 class="title">用户注册</h2>
+					<div class="input_box">
+						<input type="text" placeholder="输入手机号" class="input" name="phone">
+						<p class="err"></p>
+					</div>
+					<div class="input_box">
+						<input type="text" placeholder="输入短信验证码" class="input" name="code">
+						<p class="err"></p>
+						<a href="javascript:;" class="code">获取验证码</a>
+					</div>
+					<input type="button" class="btn submit" value="注册"/>
+				</div>
+			</form>
+		</div>
+		<!-- 以上为通用头部 -->
+		
+		
+		<div class="law_baner">
+		    <div class="fullSlide clearfix" id='banner'>
+		        <div class="bd">
+		            <ul>
+		                <li style="background:url(img/banner01.jpg) center 0 no-repeat;">
+		                    <a href="javascript:;"></a>
+		                </li>
+						<li style="background:url(img/banner01.jpg) center 0 no-repeat;">
+						    <a href="javascript:;"></a>
+						</li>
+		            </ul>
+		        </div>
+		        <div class="hd">
+		            <ul></ul>
+		        </div>
+		    </div>
+		</div>
+		<div class="law_con1 bg_white">
+			<div class="w1160">
+				<h2 class="title">让更多人了解法律</h2>
+				<ul class="list clearfix">
+					<li><span><img src="img/icon_index_apply.png"><p>文字咨询</p></span></li>
+					<li><span><img src="img/icon_index_phone.png"><p>电话咨询</p></span></li>
+					<li><span><img src="img/icon_index_active.png"><p>法律专题</p></span></li>
+					<li><span><img src="img/icon_index_down.png"><p>文书下载</p></span></li>
+					<li><span><img src="img/icon_index_lawer.png"><p>私人律师</p></span></li>
+				</ul>
+				<a href="consult.html" class="btn"><i class="inline icon_tool"></i>在线咨询</a>
+			</div>
+		</div>
+		
+		<div class="law_adv" style="background: url(img/index_adv.jpg) no-repeat center center;"></div>
+		
+		
+		
+	</body>
+</html>
